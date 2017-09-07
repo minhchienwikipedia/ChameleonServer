@@ -5,16 +5,7 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "memberId": {
-      "type": "number",
-      "index": true
-    },
-    "newsId": {
-      "type": "string",
-      "index": true
-    }
-  },
+  "properties": {},
   "validations": [],
   "relations": {
     "member": {

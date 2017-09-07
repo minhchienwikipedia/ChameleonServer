@@ -6,12 +6,6 @@
     "validateUpsert": true
   },
   "properties": {
-    "categoriesId": {
-      "type": "number",
-      "id": true,
-      "generated": false,
-      "required": false
-    },
     "name": {
       "type": "string",
       "index": true

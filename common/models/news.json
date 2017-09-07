@@ -6,16 +6,7 @@
     "validateUpsert": true
   },
   "properties": {
-    "newsId": {
-      "type": "number",
-      "id": true,
-      "generated": false,
-      "required": false
-    },
     "image": {
-      "type": "string"
-    },
-    "author": {
       "type": "string"
     },
     "title": {
