@@ -1,0 +1,22 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "chameleon": {
+    "name": "chameleon",
+    "localStorage": "",
+    "file": "",
+    "connector": "memory"
+  },
+  "ChameleonMongo": {
+    "host": "ds123534.mlab.com",
+    "port": "23534",
+    "url": "mongodb://minhchienwikipedia:123456789a@ds123534.mlab.com:23534/chameleon",
+    "database": "chameleon",
+    "password": "123456789a",
+    "name": "ChameleonMongo",
+    "user": "minhchienwikipedia",
+    "connector": "mongodb"
+  }
+}

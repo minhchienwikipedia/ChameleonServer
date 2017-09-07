@@ -1,0 +1,33 @@
+{
+  "name": "Like",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "userId": {
+      "type": "number",
+      "index": true
+    },
+    "newsId": {
+      "type": "string",
+      "index": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "member": {
+      "type": "belongsTo",
+      "model": "Member",
+      "foreignKey": "userId"
+    },
+    "news": {
+      "type": "belongsTo",
+      "model": "News",
+      "foreignKey": "newsId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

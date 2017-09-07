@@ -1,0 +1,58 @@
+{
+  "name": "News",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "newsId": {
+      "type": "number",
+      "id": true,
+      "generated": false,
+      "required": false
+    },
+    "image": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "time": {
+      "type": "date"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "member": {
+      "type": "belongsTo",
+      "model": "Member",
+      "foreignKey": ""
+    },
+    "likes": {
+      "type": "hasMany",
+      "model": "Like",
+      "foreignKey": "newsId"
+    },
+    "categories": {
+      "type": "belongsTo",
+      "model": "Categories",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Categories",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "categoriesId": {
+      "type": "number",
+      "id": true,
+      "generated": false,
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "index": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "news": {
+      "type": "hasMany",
+      "model": "News",
+      "foreignKey": "categoriesId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Member",
+  "plural": "members",
+  "base": "User",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "userId": {
+      "type": "number",
+      "id": true,
+      "generated": false,
+      "required": false
+    },
+    "name": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "news": {
+      "type": "hasMany",
+      "model": "News",
+      "foreignKey": "userId"
+    },
+    "likes": {
+      "type": "hasMany",
+      "model": "Like",
+      "foreignKey": "userId"
+    },
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "AccessToken",
+      "foreignKey": "userId"
+    },
+    "roles": {
+      "type": "hasMany",
+      "model": "Role",
+      "foreignKey": "principalId",
+      "through": "RoleMapping"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
