@@ -6,7 +6,7 @@
     "validateUpsert": true
   },
   "properties": {
-    "userId": {
+    "memberId": {
       "type": "number",
       "index": true
     },
@@ -20,7 +20,7 @@
     "member": {
       "type": "belongsTo",
       "model": "Member",
-      "foreignKey": "userId"
+      "foreignKey": "memberId"
     },
     "news": {
       "type": "belongsTo",

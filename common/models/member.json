@@ -7,7 +7,7 @@
     "validateUpsert": true
   },
   "properties": {
-    "userId": {
+    "memberId": {
       "type": "number",
       "id": true,
       "generated": false,
@@ -25,17 +25,17 @@
     "news": {
       "type": "hasMany",
       "model": "News",
-      "foreignKey": "userId"
+      "foreignKey": "memberId"
     },
     "likes": {
       "type": "hasMany",
       "model": "Like",
-      "foreignKey": "userId"
+      "foreignKey": "memberId"
     },
     "accessTokens": {
       "type": "hasMany",
       "model": "AccessToken",
-      "foreignKey": "userId"
+      "foreignKey": "memberId"
     },
     "roles": {
       "type": "hasMany",
