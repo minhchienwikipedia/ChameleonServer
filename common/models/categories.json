@@ -9,6 +9,9 @@
     "name": {
       "type": "string",
       "index": true
+    },
+    "color": {
+      "type": "string"
     }
   },
   "validations": [],
