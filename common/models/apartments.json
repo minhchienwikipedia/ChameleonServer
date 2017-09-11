@@ -1,0 +1,56 @@
+{
+  "name": "Apartments",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "people": {
+      "type": "number"
+    },
+    "room": {
+      "type": "number"
+    },
+    "beds": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "member": {
+      "type": "belongsTo",
+      "model": "Member",
+      "foreignKey": ""
+    },
+    "images": {
+      "type": "hasMany",
+      "model": "ImagesApartments",
+      "foreignKey": "apartmentsId"
+    },
+    "likes": {
+      "type": "hasMany",
+      "model": "LikeApartments",
+      "foreignKey": "apartmentsId"
+    },
+    "reviews": {
+      "type": "hasMany",
+      "model": "ReviewsApartments",
+      "foreignKey": "apartmentsId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

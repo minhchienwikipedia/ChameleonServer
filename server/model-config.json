@@ -50,5 +50,21 @@
   "Member": {
     "dataSource": "ChameleonMongo",
     "public": true
+  },
+  "Apartments": {
+    "dataSource": "ChameleonMongo",
+    "public": true
+  },
+  "LikeApartments": {
+    "dataSource": "ChameleonMongo",
+    "public": true
+  },
+  "ReviewsApartments": {
+    "dataSource": "ChameleonMongo",
+    "public": true
+  },
+  "ImagesApartments": {
+    "dataSource": "ChameleonMongo",
+    "public": true
   }
 }

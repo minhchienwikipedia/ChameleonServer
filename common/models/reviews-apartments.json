@@ -1,0 +1,24 @@
+{
+  "name": "ReviewsApartments",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "member": {
+      "type": "belongsTo",
+      "model": "Member",
+      "foreignKey": "memberId"
+    },
+    "apartments": {
+      "type": "belongsTo",
+      "model": "Apartments",
+      "foreignKey": "apartmentsId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,23 @@
+{
+  "name": "ImagesApartments",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "url": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "apartments": {
+      "type": "belongsTo",
+      "model": "Apartments",
+      "foreignKey": "apartmentsId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
