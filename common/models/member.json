@@ -2,18 +2,13 @@
   "name": "Member",
   "plural": "members",
   "base": "User",
-  "idInjection": false,
+  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
     "avatar": {
       "type": "string"
-    },
-    "memberId": {
-      "type": "string",
-      "id": true,
-      "generated": true
     }
   },
   "validations": [],
@@ -35,8 +30,14 @@
     },
     "accessTokens": {
       "type": "hasMany",
-      "model": "AccessToken",
-      "foreignKey": "memberId"
+      "model": "accessToken",
+      "polymorphic": {
+        "foreignKey": "userId",
+        "discriminator": "principalType"
+      },
+      "options": {
+        "disableInclude": true
+      }
     },
     "roles": {
       "type": "hasMany",
@@ -45,13 +46,6 @@
       "through": "RoleMapping"
     }
   },
-  "acls": [
-    {
-      "accessType": "*",
-      "principalType": "ROLE",
-      "principalId": "$owner",
-      "permission": "ALLOW"
-    }
-  ],
+  "acls": [],
   "methods": {}
 }

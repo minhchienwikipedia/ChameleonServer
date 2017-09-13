@@ -21,18 +21,18 @@
     "public": true
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "ChameleonMongo",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "ChameleonMongo",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "ChameleonMongo",
     "public": false
   },
   "Chameleon": {
@@ -64,6 +64,10 @@
     "public": true
   },
   "ImagesApartments": {
+    "dataSource": "ChameleonMongo",
+    "public": true
+  },
+  "accessToken": {
     "dataSource": "ChameleonMongo",
     "public": true
   }
