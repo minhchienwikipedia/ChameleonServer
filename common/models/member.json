@@ -23,6 +23,11 @@
       "model": "Like",
       "foreignKey": "memberId"
     },
+    "likesApartments": {
+      "type": "hasMany",
+      "model": "LikeApartments",
+      "foreignKey": "memberId"
+    },
     "accessTokens": {
       "type": "hasMany",
       "model": "AccessToken",
