@@ -16,9 +16,16 @@
     "apartments": {
       "type": "belongsTo",
       "model": "Apartments",
-      "foreignKey": "apartmentsId"
+      "foreignKey": ""
     }
   },
-  "acls": [],
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
   "methods": {}
 }

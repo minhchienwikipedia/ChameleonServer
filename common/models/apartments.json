@@ -33,7 +33,7 @@
     "member": {
       "type": "belongsTo",
       "model": "Member",
-      "foreignKey": ""
+      "foreignKey": "memberId"
     },
     "images": {
       "type": "hasMany",

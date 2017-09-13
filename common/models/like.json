@@ -11,12 +11,12 @@
     "member": {
       "type": "belongsTo",
       "model": "Member",
-      "foreignKey": "memberId"
+      "foreignKey": ""
     },
     "news": {
       "type": "belongsTo",
       "model": "News",
-      "foreignKey": "newsId"
+      "foreignKey": ""
     }
   },
   "acls": [],

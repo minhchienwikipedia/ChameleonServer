@@ -18,6 +18,11 @@
       "model": "News",
       "foreignKey": "memberId"
     },
+    "apartments": {
+      "type": "hasMany",
+      "model": "Apartments",
+      "foreignKey": "memberId"
+    },
     "likes": {
       "type": "hasMany",
       "model": "Like",
@@ -46,6 +51,13 @@
       "through": "RoleMapping"
     }
   },
-  "acls": [],
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
   "methods": {}
 }

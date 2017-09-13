@@ -15,7 +15,7 @@
     "apartments": {
       "type": "belongsTo",
       "model": "Apartments",
-      "foreignKey": "apartmentsId"
+      "foreignKey": ""
     }
   },
   "acls": [],
