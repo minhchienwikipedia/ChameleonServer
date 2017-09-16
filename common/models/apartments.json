@@ -24,6 +24,9 @@
     "beds": {
       "type": "number"
     },
+    "breakfast": {
+      "type": "boolean"
+    },
     "description": {
       "type": "string"
     }
