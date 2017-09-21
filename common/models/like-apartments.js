@@ -16,8 +16,8 @@ module.exports = function(Likeapartments) {
           var err = new Error();
           err = {
             statusCode: 450,
-            name: 'Error LIKE',
-            message: 'System is under deactivated mode.',
+            name: 'Error Like Apartments',
+            message: 'User has liked apartments.',
           };
 
           cb(err);
