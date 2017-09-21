@@ -39,7 +39,7 @@ module.exports = function(Likeapartments) {
                 },
                 function(err5, data5) {
                   if (err5) cb(err5);
-                  cb(null, data5);
+                  cb(null, data5[0]);
                 }
               );
             }
@@ -62,7 +62,10 @@ module.exports = function(Likeapartments) {
                 },
                 function(err2, data2) {
                   if (err2) cb(err2);
-                  cb(null, data2);
+                  data2.forEach(function(value) {
+                    var obj = value.toJSON();
+                    cb(null, obj.apartments);
+                  });
                 }
               );
             }
