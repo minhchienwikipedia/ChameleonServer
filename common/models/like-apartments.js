@@ -1,7 +1,9 @@
 'use strict';
+var app = require('../../server/server');
 
 module.exports = function(Likeapartments) {
   Likeapartments.likeApartments = function(likeInfo, cb) {
+    var Apartments = app.models.Apartments;
     const {memberId, apartmentsId} = likeInfo;
     Likeapartments.find(
       {
@@ -13,14 +15,35 @@ module.exports = function(Likeapartments) {
       function(err3, data3) {
         if (err3) cb(err3);
         if (data3.length > 0) {
-          var err = new Error();
-          err = {
-            statusCode: 450,
-            name: 'Error Like Apartments',
-            message: 'User has liked apartments.',
-          };
+          /* var err = new Error();
+            err = {
+              statusCode: 450,
+              name: 'Error Like Apartments',
+              message: 'User has liked apartments.',
+            };
+            cb(err); */
 
-          cb(err);
+          Likeapartments.destroyAll(
+            {
+              memberId,
+              apartmentsId,
+            },
+            function(err4, data4) {
+              if (err4) cb(err4);
+              Apartments.find(
+                {
+                  include: ['reviews', 'images', 'likes'],
+                  where: {
+                    id: apartmentsId,
+                  },
+                },
+                function(err5, data5) {
+                  if (err5) cb(err5);
+                  cb(null, data5);
+                }
+              );
+            }
+          );
         } else {
           Likeapartments.create(
             {
